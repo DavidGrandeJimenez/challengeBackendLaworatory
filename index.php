@@ -8,8 +8,11 @@ require_once 'login.html'; //Se necesita obligatoriamente ese código HTML, que 
 
 $con = connect();   //Se ejecuta la función de conectarnos a la BDD (y se guarda en una variable)
 
-create_db($con); //Se crea la BDD "prueba_laworatory" en caso de que no existiese ya
-create_table($con); //Se crean en la BDD las tablas necesarias (en caso de que no existiese ya)
+if (isset($con)) {
+    create_db($con); //Se crea la BDD "prueba_laworatory" en caso de que no existiese ya
+    create_table($con); //Se crean en la BDD las tablas necesarias (en caso de que no existiese ya)
+}
+
 
 /*
 $company_info = array(
@@ -31,7 +34,7 @@ $company_info2 = array(
 );
 
 insert($con, 'venta', $company_info2); 
-*/
+
 
 
 
@@ -65,3 +68,4 @@ if (!empty($_POST['id_company'])) { //Si se ha recibido el nombre del usuario ..
         //header("Location: report.php");
     }
 }
+*/

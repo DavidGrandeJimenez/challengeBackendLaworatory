@@ -1,13 +1,29 @@
 <?php
 //Archivo que almacena todas las funciones utilizados por el resto de archivos .php
+$credentials = 'server_credentials.txt';
 
-require_once 'server_credentials.txt'; //A modo de simulación, se ha guardado las claves de acceso al servidor en un archivo ajeno al actual. Normalmente estaría guardado de un modo seguro o encriptado. Pero para este challenge simplemente se ha guardado en un archivo .txt conservando el código php, por lo que solo hace falta importarlo.
+if (file_exists($credentials)) {
+    require_once $credentials; //A modo de simulación, se ha guardado las claves de acceso al servidor en un archivo ajeno al actual. Normalmente estaría guardado de un modo seguro o encriptado. Pero para este challenge simplemente se ha guardado en un archivo .txt conservando el código php, por lo que solo hace falta importarlo.
+}
 
 //Función de conexión a la base de datos a partir de las credenciales de acceso. Se devuelve el objeto SQL de dicha conexión
 function connect()
 {
-    $con = mysqli_connect($GLOBALS["host"], $GLOBALS["user  "], $GLOBALS["pass"]) or die("Ha ocurrido un error con la BD");
-    return $con;
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Habilita excepciones
+    try {
+        if (isset($GLOBALS["host"], $GLOBALS["user"], $GLOBALS["pass"])) {
+            $con = mysqli_connect($GLOBALS["host"], $GLOBALS["user"], $GLOBALS["pass"]);
+            return $con;
+        } else {
+            $con = null;
+            echo "<p id='error'>Ha ocurrido un problema con el servidor. Sentimos las molestias.<p/>";
+            return $con;
+        }
+    } catch (mysqli_sql_exception $e) {
+        $con = null;
+        echo "<p id='error'>Ha ocurrido un problema con el servidor. Sentimos las molestias.<p/>";
+        return $con;
+    }
 }
 
 //Función de crear la base de datos en caso de que no existiese antes
@@ -15,8 +31,8 @@ function create_db($con)
 {
     mysqli_query($con, "CREATE DATABASE IF NOT EXISTS challenge_laworatory");
 }
-//TODO: Ingresar NOT NULL y ddemás especificadores en los campos de las tablas
-//Función de crear las tablas requeridas de la BDD en caso de que no existiesen antes
+
+
 function create_table($con)
 {
     mysqli_select_db($con, "challenge_laworatory");
@@ -24,7 +40,7 @@ function create_table($con)
 
     //Creación de la tabla venta. Se crean las claves foráneas para que puedan ser eliminadas automáticamente cuando su clave primaria de la tabla empresa sea eliminada.
     mysqli_query($con, "CREATE TABLE IF NOT EXISTS venta(id_venta int PRIMARY KEY auto_increment, venta_empresa int, num_factura varchar(20) NOT NULL, fecha_venta date NOT NULL, nombre_articulo varchar(255), cantidad_articulo int, comprador varchar(255), valor_total decimal(12, 2) NOT NULL, 
-    CONSTRAINT fk_usuario FOREIGN KEY (venta_empresa) REFERENCES empresa(id_empresa) ON DELETE CASCADE)");
+        CONSTRAINT fk_usuario FOREIGN KEY (venta_empresa) REFERENCES empresa(id_empresa) ON DELETE CASCADE)");
 }
 
 //Función para seleccionar y devolver todos los datos de la tabla pasada por parámetro
@@ -100,7 +116,8 @@ function select_field($con, $id, $field, $table)
 
 //TODO: controlar si se introducen mal los datos, ya sea el tipo, la longitud o el nombre del campo. 
 
-function insert($con, $table, $array){
+function insert($con, $table, $array)
+{
 
     $select = select_all($con, $table, 0);
     if (compare_equals($select, $array)) {
