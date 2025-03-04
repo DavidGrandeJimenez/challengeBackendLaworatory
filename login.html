@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- Diseño HTML básico de la pantalla de inicio de sesión. Incluye los campos requeridos de nombre de usuario y contraseña, además del botón de Login. Todo ello envuelto en un formulario que redirije a index.php-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Validación de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form action="index.php" method="POST">
+            <div class="form-group">
+                <label for="input">Por favor, introduzca el ID de su empresa:</label>
+                <input type="text" id="input" name="id_company" placeholder="Por ejemplo: 1" required>
+            </div>
+            <button type="submit" class="login-button">Entrar</button>
+        </form>
+    </div>
+</body>
+
+</html>
