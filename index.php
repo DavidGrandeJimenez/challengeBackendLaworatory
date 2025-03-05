@@ -1,18 +1,18 @@
 <?php
-//Página del inicio de sesión 
-session_start(); //Se crea la sesión que se utilizará hasta que la persona le dé a logout en otras pantallas
+session_start();
 
-require_once 'functions.php'; //Se necesita obligatoriamente el archivo de las funciones
+require_once 'functions.php';
 
-require_once 'login.html'; //Se necesita obligatoriamente ese código HTML, que contiene los inputs cuya información será procesada en este script
-
-
-$con = connect();   //Se ejecuta la función de conectarnos a la BDD (y se guarda en una variable)
-
-create_db($con); //Se crea la BDD "prueba_laworatory" en caso de que no existiese ya
-create_table($con); //Se crean en la BDD las tablas necesarias (en caso de que no existiese ya)
+require_once 'login.html';
 
 
+$con = connect();   //Crear conexión a la BDD
+
+//Crear la BDD y las tablas necesarias en caso de que no existan todavía
+create_db($con); 
+create_table($con);
+
+//Insertar los registros en las tablas
 insert($con, 'empresa', array(
     'nombre_empresa' => 'China Construction Eighth Engineering Division Corp., Ltd'
 ));
@@ -357,17 +357,18 @@ insert($con, 'venta', array(
 ));
 
 
-if (!empty($_POST['id_company'])) { //Si se ha recibido el nombre del usuario ...
+//Controlar recepción del formulario de login
+if (!empty($_POST['id_company'])) { //Si se ha recibido el nombre del usuario
     
+    //Se busca el ID de la empresa introducido en el login en la BDD
+    $id = select_field($con, $_POST['id_company'], "id_empresa", "empresa");
 
-    //Se busca el nombre introducido en la tabla de usuarios
-    $id = select_field($con, $_POST['id_company'], "id_empresa", "empresa", true);
-
-    if ($id == -1) { //En caso de que no se haya encontrado el nombre de usuario, se muestra un mensaje de error
+    if ($id == -1) { //Si no se encuentra la empresa en la BDD...
         echo "<h3 style='color: darkred'>El ID introducido no coincide con ninguno de nuestra base de datos</h3>";
     } else { //Si se ha encontrado el usuario en la BDD...
         echo "<h3 style='color: blue'>Bienvenido, ".$id[0]['nombre_empresa']."</h3><br/><p>Será redireccionado en 2 segundos a su informe trimestral</p>";
         $_SESSION["id_company"] = $id[0]['id_empresa']; //Se establece el ID de la empresa como variable de la sesión
+        mysqli_close($con);
         header("Refresh: 2; URL=report.php");
     }
 }
