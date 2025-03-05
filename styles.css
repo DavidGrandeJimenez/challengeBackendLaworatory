@@ -7,9 +7,14 @@ body {
     line-height: 1.6;
 }
 
+.verde
+{
+    color: #4CAF50;
+}
+
 h1 {
     font-size: 2.5em;
-    color: #4CAF50;
+    color: #4CAF50 !important;
     margin-bottom: 10px;
 }
 h2 {

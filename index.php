@@ -61,7 +61,7 @@ insert($con, 'venta', array(
 insert($con, 'venta', array(
     'venta_empresa' => 1,
     'num_factura' => 'E-2024-67890',
-    'fecha_venta' => '2024-09-22',
+    'fecha_venta' => '2024-11-22',
     'nombre_articulo' => 'varillas de acero',
     'cantidad_articulo' => 7500,
     'comprador' => 'Edificaciones Modernas Ltd.',
@@ -83,7 +83,7 @@ insert($con, 'venta', array(
 insert($con, 'venta', array(
     'venta_empresa' => 1,
     'num_factura' => 'G-2024-24680',
-    'fecha_venta' => '2024-09-15',
+    'fecha_venta' => '2024-11-15',
     'nombre_articulo' => 'tuberia de PVC',
     'cantidad_articulo' => 15000,
     'comprador' => 'Infraestructuras Hidraulicas S.L.',
@@ -115,7 +115,7 @@ insert($con, 'venta', array(
 insert($con, 'venta', array(
     'venta_empresa' => 1,
     'num_factura' => 'J-2024-11223',
-    'fecha_venta' => '2024-09-10',
+    'fecha_venta' => '2024-10-10',
     'nombre_articulo' => 'paneles de yeso',
     'cantidad_articulo' => 4000,
     'comprador' => 'Bouwbedrijf van der Meer',
@@ -126,7 +126,7 @@ insert($con, 'venta', array(
 insert($con, 'venta', array(
     'venta_empresa' => 1,
     'num_factura' => 'K-2024-12345',
-    'fecha_venta' => '2024-09-20',
+    'fecha_venta' => '2024-12-20',
     'nombre_articulo' => 'aislante termico',
     'cantidad_articulo' => 3500,
     'comprador' => 'Ecological Insulations Ltd.',
@@ -292,8 +292,8 @@ insert($con, 'venta', array(
 
 insert($con, 'venta', array(
     'venta_empresa' => 3,
-    'num_factura' => 'A-2025-11223',
-    'fecha_venta' => '2025-01-05',
+    'num_factura' => 'A-2024-11223',
+    'fecha_venta' => '2024-10-05',
     'nombre_articulo' => 'varilla de acero',
     'cantidad_articulo' => 1500,
     'comprador' => 'ArcelorMittal',
@@ -303,8 +303,8 @@ insert($con, 'venta', array(
 
 insert($con, 'venta', array(
     'venta_empresa' => 3,
-    'num_factura' => 'B-2025-44556',
-    'fecha_venta' => '2025-01-20',
+    'num_factura' => 'B-2024-44556',
+    'fecha_venta' => '2024-10-20',
     'nombre_articulo' => 'lámina galvanizada',
     'cantidad_articulo' => 1200,
     'comprador' => 'Nippon Steel',
@@ -314,8 +314,8 @@ insert($con, 'venta', array(
 
 insert($con, 'venta', array(
     'venta_empresa' => 3,
-    'num_factura' => 'C-2025-77889',
-    'fecha_venta' => '2025-02-10',
+    'num_factura' => 'C-2024-77889',
+    'fecha_venta' => '2024-12-10',
     'nombre_articulo' => 'cemento Portland',
     'cantidad_articulo' => 2000,
     'comprador' => 'LafargeHolcim',
@@ -325,8 +325,8 @@ insert($con, 'venta', array(
 
 insert($con, 'venta', array(
     'venta_empresa' => 3,
-    'num_factura' => 'D-2025-00112',
-    'fecha_venta' => '2025-02-25',
+    'num_factura' => 'D-2024-00112',
+    'fecha_venta' => '2024-12-25',
     'nombre_articulo' => 'arena sílice',
     'cantidad_articulo' => 1800,
     'comprador' => 'Sibelco',
@@ -336,8 +336,8 @@ insert($con, 'venta', array(
 
 insert($con, 'venta', array(
     'venta_empresa' => 3,
-    'num_factura' => 'E-2025-33445',
-    'fecha_venta' => '2025-03-15',
+    'num_factura' => 'E-2024-33445',
+    'fecha_venta' => '2024-11-15',
     'nombre_articulo' => 'gravilla',
     'cantidad_articulo' => 2200,
     'comprador' => 'HeidelbergCement',
@@ -347,8 +347,8 @@ insert($con, 'venta', array(
 
 insert($con, 'venta', array(
     'venta_empresa' => 3,
-    'num_factura' => 'F-2025-66778',
-    'fecha_venta' => '2025-03-30',
+    'num_factura' => 'F-2024-66778',
+    'fecha_venta' => '2024-12-30',
     'nombre_articulo' => 'bloque de hormigón',
     'cantidad_articulo' => 2500,
     'comprador' => 'CRH plc',
