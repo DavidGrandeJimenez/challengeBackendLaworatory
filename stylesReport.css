@@ -1,0 +1,101 @@
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('./background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.logout{
+    background-color: darkred;
+    margin: 2rem;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.4rem;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+.logout:hover{
+    background-color: red;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error{
+    width: 35vw;
+    color:darkred;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(244, 185, 185);
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.pdf_button{
+    background-color: #0575ee;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 3rem;
+}
+.pdf_button:hover{
+    background-color: #014791;
+}
+
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 5px solid aliceblue;
+    border-radius: 2px;
+}
+
+table th,
+table td {
+    
+    border: 1px solid #ddd;
+    padding: 0.3rem;
+    text-align: center;
+    line-height: 1.5rem;
+
+}
+
+table th {
+    background-color: #014791;
+    color: white;
+    line-height: 1.5rem;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(166, 208, 244, 0.404)
+}
+
+table tr:hover {
+    background-color: rgba(166, 208, 244, 0.783);
+}
+h3{
+    margin: 0.5rem;
+}
