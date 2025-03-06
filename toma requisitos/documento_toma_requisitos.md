@@ -33,10 +33,6 @@ El producto está diseñado para todos los usuarios de nuestras herramientas web
 
 - Definir las funciones y métodos de forma general y escalable para asegurar su correcto funcionamiento con el menor código posible y reutilizable para las diferentes empresas y sus datos.
 
-<br/>
-<br/>
-<br/>
-<br/>
 
 ### **3.2 Interfaz Web**  
 - Mostrar los datos en una tabla HTML bien organizada que se adecúe al número requerido de registros.  
@@ -44,22 +40,21 @@ El producto está diseñado para todos los usuarios de nuestras herramientas web
 - Los datos deben presentarse de la manera más clara, accesible e intuitiva posible.
 
 - Si ocurre un fallo con la base de datos, reflejar ese fallo en la interfaz y en la tabla y evitar problemas en la ejecución del proyecto.
-
-- Opcional: Incluir opciones de ordenamiento por columnas.  
+ 
 
 - Opcional: Implementar un diseño responsivo para que el informe sea accesible desde cualquier dispositivo.
 
 
 ### **3.3 Opcional: Generación y descarga del reporte**  
 
-- Implementar opción de **imprimir el informe**.  
+- Implementar opción de **generar el informe**.  
 
-- Permitir exportar los datos en formato **PDF**. 
+- Permitir exportar y descargar los datos del informe en formato **PDF**. 
 
 ### **3.4 Seguridad y Accesibilidad**  
 - Implementar una breve autenticación para acceder al informe, sobre todo es necesario obtener el ID de la empresa.
   
-- Proteger contra inyección SQL y otras vulnerabilidades comunes.  
+- Proteger contra inyección SQL y otras vulnerabilidades comunes. Para ello, se utilzarán funciones ***mysqli_params*** y otros métodos semejantes mysqli.  
 
 ---
 
@@ -67,9 +62,10 @@ El producto está diseñado para todos los usuarios de nuestras herramientas web
 | **Característica**           | **Detalle**                                      |
 |-----------------------------|--------------------------------------------------|
 | **Lenguaje de programación** | PHP 8.0 o superior (en desarrollo: v.8.2.12)    |
-| **Base de datos (BDD)**      | MySQL (en desarrollo: MariaDB 10.4.32 con Xammp 8.2.12) |
+| **Base de datos (BDD)**      | MySQL con valores de acceso por defecto de Xammp (en desarrollo: MariaDB 10.4.32 con Xammp 8.2.12) |
 | **Tecnología de conexión a BDD** | MySQLi                                   |
 | **Front-end**               | HTML5 y CSS3                                   |
+| **Librería generadora de PDF**               | domPdf (v.3.1.0)                                  |
 | **Servidor**                | Apache (v.2.4.58) a través de Xammp (v.8.2.12)            |
 | **Entorno de Desarrollo (IDE)**                | Visual Studio Code           |
 | **Compatibilidad**          | Chrome, Firefox, Edge, Safari|

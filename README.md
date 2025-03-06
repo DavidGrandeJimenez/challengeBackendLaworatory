@@ -27,10 +27,11 @@ Este proyecto es un challenge de back-end para Laworatory. El objetivo es desarr
 ## Aclaraciones
 - Para una opción más realista y adecuada al contexto, se ha diseñado también una breve página de logIn en la que el usuario deberá introducir un ID de empresa válido (actualmente, son los IDs del 1 al 3, inclusive). De este modo, se presentarán tan solo los registros correspondientes al ID de la empresa que haya iniciado sesión.
 
-
 - Podrás encontrar el documento de toma de requisitos en su carpeta correspondiente (***toma requisitos***). Están disponibles tanto en formato PDF como en MarkDown.
 
-- No es necesario crear o insertar los registros necesarios antes de ejecutar el proyecto. Simplemente ya lo realiza éste por nosotros.
+- No es necesario crear o insertar los registros necesarios antes de ejecutar el proyecto. Simplemente ya lo realiza éste por nosotros previniendo errores de inserción.
+
+- Para simular la seguridad o "encapsulación" de las claves de acceso de la BDD SQL por defecto de Xampp, se ha decidido aislar dichas claves en un archivo externo sin cifrar (***server_credentials.txt***). En un proyecto real, dichas claves se encontrarían en otra sección cifrada del servidor y/o dicho fichero estaría cifrado.
 
 - Las funciones (**functions.php**) han sido diseñadas como "generales" o "neutras", es decir, que están pensadas para permitir la escalabilidad por su utilización en diferentes contextos. Por ejemplo, se puede implementar con cualquier tabla o campo de SQL.
 
