@@ -27,12 +27,14 @@ $array_rows = select_field($connection, $_SESSION["id_company"], "venta_empresa"
 
 $total_amount = 0;
 $tbody = "";
+$num_row = 1;
 
 if (isset($array_rows)) {
     foreach ($array_rows as $row) { //Obtener las filas de los registros de venta
         extract($row);
         $total_amount += $valor_total;
         $trow = "<tr>
+            <td>$num_row</td>
             <td>$venta_empresa</td>
             <td>$num_factura</td>
             <td>$fecha_venta</td>
@@ -43,6 +45,7 @@ if (isset($array_rows)) {
             <td>".number_format($valor_total, 2)."</td>
         </tr>";
         $tbody .= $trow;
+        $num_row += 1;
     }
 } else {
     $tbody = "<tr>
@@ -53,13 +56,14 @@ if (isset($array_rows)) {
 // Crear la tabla con los datos de venta. Posible omisión si en el html se obtiene el código a partir del buffer de salida ob_start() y ob_get_clean();
 $table = "
     <head>
-        <link rel='stylesheet' href='./stylesTable.css'>
+        <link rel='stylesheet' href='./css/stylesTable.css'>
         </link>
     </head>
     <body>
         <table>
             <thead>
                 <tr>
+                    <th>Número de registro</th>
                     <th>ID de tu empresa</th>
                     <th>Número de factura</th>
                     <th>Fecha de la venta</th>
@@ -73,7 +77,7 @@ $table = "
             <tbody>" . $tbody . "</tbody>
             <tfoot>
                 <tr>
-                    <td colspan='5'></td>
+                    <td colspan='6'></td>
                     <td><h3>Total: </h3></td>
                     <td colspan='2'>
                         <h3>".number_format($total_amount, 2)." €</h3>
@@ -103,7 +107,7 @@ if (isset($_POST["pdf"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe de Ventas</title>
-    <link rel="stylesheet" href="stylesReport.css">
+    <link rel="stylesheet" href="./css/stylesReport.css">
     </link>
 </head>
 
@@ -118,6 +122,7 @@ if (isset($_POST["pdf"])) {
         <table>
             <thead>
                 <tr>
+                    <th>Número de registro</th>
                     <th>ID de tu empresa</th>
                     <th>Número de factura</th>
                     <th>Fecha de la venta</th>
@@ -135,7 +140,7 @@ if (isset($_POST["pdf"])) {
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan='5'></td>
+                    <td colspan='6'></td>
                     <td><h3>Total: </h3></td>
                     <td colspan='2'>
                         <h3><?= number_format($total_amount, 2) ?> €</h3>

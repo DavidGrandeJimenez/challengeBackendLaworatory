@@ -132,6 +132,118 @@ insert($con, 'venta', array(
     'valor_total' => 20750.90
 ));
 
+
+insert($con, 'venta', array(
+    'venta_empresa' => 1,  
+    'num_factura' => 'K-2024-67890',  
+    'fecha_venta' => '2024-10-15',  
+    'nombre_articulo' => 'panel acústico',  
+    'cantidad_articulo' => 4200,  
+    'comprador' => 'Green Build Solutions Inc.',  
+    'referencia_transaccion' => 'A12345678901234XYZ',  
+    'valor_total' => 25999.75  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 1,  
+    'num_factura' => 'K-2024-67891',  
+    'fecha_venta' => '2024-11-05',  
+    'nombre_articulo' => 'lana mineral',  
+    'cantidad_articulo' => 3800,  
+    'comprador' => 'EcoHome Solutions',  
+    'referencia_transaccion' => 'B23456789012345XYZ',  
+    'valor_total' => 23500.60  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 1,  
+    'num_factura' => 'K-2024-67892',  
+    'fecha_venta' => '2024-12-10',  
+    'nombre_articulo' => 'placa de yeso',  
+    'cantidad_articulo' => 5000,  
+    'comprador' => 'Sustainable Interiors Ltd.',  
+    'referencia_transaccion' => 'C34567890123456XYZ',  
+    'valor_total' => 27899.99  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 1,  
+    'num_factura' => 'K-2024-67893',  
+    'fecha_venta' => '2024-10-22',  
+    'nombre_articulo' => 'pintura ecológica',  
+    'cantidad_articulo' => 3200,  
+    'comprador' => 'Green Paint Co.',  
+    'referencia_transaccion' => 'D45678901234567XYZ',  
+    'valor_total' => 19875.45  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 1,  
+    'num_factura' => 'K-2024-67894',  
+    'fecha_venta' => '2024-11-18',  
+    'nombre_articulo' => 'vidrio reciclado',  
+    'cantidad_articulo' => 4100,  
+    'comprador' => 'EcoGlass Industries',  
+    'referencia_transaccion' => 'E56789012345678XYZ',  
+    'valor_total' => 24599.30  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 1,  
+    'num_factura' => 'K-2024-67895',  
+    'fecha_venta' => '2024-12-25',  
+    'nombre_articulo' => 'panel solar',  
+    'cantidad_articulo' => 2800,  
+    'comprador' => 'Solar Future Corp.',  
+    'referencia_transaccion' => 'F67890123456789XYZ',  
+    'valor_total' => 31200.80  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 1,  
+    'num_factura' => 'K-2024-67896',  
+    'fecha_venta' => '2024-10-30',  
+    'nombre_articulo' => 'tejas ecológicas',  
+    'cantidad_articulo' => 3700,  
+    'comprador' => 'Sustainable Roofs Ltd.',  
+    'referencia_transaccion' => 'G78901234567890XYZ',  
+    'valor_total' => 22899.50  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 1,  
+    'num_factura' => 'K-2024-67897',  
+    'fecha_venta' => '2024-11-12',  
+    'nombre_articulo' => 'madera reciclada',  
+    'cantidad_articulo' => 4500,  
+    'comprador' => 'Green Timber Co.',  
+    'referencia_transaccion' => 'H89012345678901XYZ',  
+    'valor_total' => 27550.70  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 1,  
+    'num_factura' => 'K-2024-67898',  
+    'fecha_venta' => '2024-12-05',  
+    'nombre_articulo' => 'baldosas ecológicas',  
+    'cantidad_articulo' => 3900,  
+    'comprador' => 'EcoTiles & Co.',  
+    'referencia_transaccion' => 'I90123456789012XYZ',  
+    'valor_total' => 23999.95  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 1,  
+    'num_factura' => 'K-2024-67899',  
+    'fecha_venta' => '2024-10-08',  
+    'nombre_articulo' => 'aislante acústico',  
+    'cantidad_articulo' => 3300,  
+    'comprador' => 'Silent Home Solutions',  
+    'referencia_transaccion' => 'J01234567890123XYZ',  
+    'valor_total' => 21050.20  
+));
+
+
 insert($con, 'venta', array(
     'venta_empresa' => 2,
     'num_factura' => 'L-2024-54321',
@@ -241,6 +353,117 @@ insert($con, 'venta', array(
     'referencia_transaccion' => '567890123456789STU',
     'valor_total' => 15000.00
 ));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 2,  
+    'num_factura' => 'K-2024-67900',  
+    'fecha_venta' => '2024-10-12',  
+    'nombre_articulo' => 'bloques térmicos',  
+    'cantidad_articulo' => 4000,  
+    'comprador' => 'EcoBuild Supplies',  
+    'referencia_transaccion' => 'K12345678901234XYZ',  
+    'valor_total' => 26500.40  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 2,  
+    'num_factura' => 'K-2024-67901',  
+    'fecha_venta' => '2024-11-22',  
+    'nombre_articulo' => 'panel aislante',  
+    'cantidad_articulo' => 3500,  
+    'comprador' => 'Sustainable Homes Ltd.',  
+    'referencia_transaccion' => 'L23456789012345XYZ',  
+    'valor_total' => 24875.60  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 2,  
+    'num_factura' => 'K-2024-67902',  
+    'fecha_venta' => '2024-12-18',  
+    'nombre_articulo' => 'madera laminada',  
+    'cantidad_articulo' => 4200,  
+    'comprador' => 'GreenWood Industries',  
+    'referencia_transaccion' => 'M34567890123456XYZ',  
+    'valor_total' => 27999.95  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 2,  
+    'num_factura' => 'K-2024-67903',  
+    'fecha_venta' => '2024-10-28',  
+    'nombre_articulo' => 'hormigón ecológico',  
+    'cantidad_articulo' => 5000,  
+    'comprador' => 'EcoConcrete Solutions',  
+    'referencia_transaccion' => 'N45678901234567XYZ',  
+    'valor_total' => 30550.75  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 2,  
+    'num_factura' => 'K-2024-67904',  
+    'fecha_venta' => '2024-11-15',  
+    'nombre_articulo' => 'tejas solares',  
+    'cantidad_articulo' => 2900,  
+    'comprador' => 'Solar Roofing Ltd.',  
+    'referencia_transaccion' => 'O56789012345678XYZ',  
+    'valor_total' => 31899.30  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 2,  
+    'num_factura' => 'K-2024-67905',  
+    'fecha_venta' => '2024-12-02',  
+    'nombre_articulo' => 'aislante acústico',  
+    'cantidad_articulo' => 3600,  
+    'comprador' => 'Silent Homes Co.',  
+    'referencia_transaccion' => 'P67890123456789XYZ',  
+    'valor_total' => 23950.80  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 2,  
+    'num_factura' => 'K-2024-67906',  
+    'fecha_venta' => '2024-10-20',  
+    'nombre_articulo' => 'placa de corcho',  
+    'cantidad_articulo' => 3300,  
+    'comprador' => 'Natural Insulation Ltd.',  
+    'referencia_transaccion' => 'Q78901234567890XYZ',  
+    'valor_total' => 22789.50  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 2,  
+    'num_factura' => 'K-2024-67907',  
+    'fecha_venta' => '2024-11-30',  
+    'nombre_articulo' => 'vidrio reciclado',  
+    'cantidad_articulo' => 3900,  
+    'comprador' => 'EcoGlass Manufacturing',  
+    'referencia_transaccion' => 'R89012345678901XYZ',  
+    'valor_total' => 25250.70  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 2,  
+    'num_factura' => 'K-2024-67908',  
+    'fecha_venta' => '2024-12-08',  
+    'nombre_articulo' => 'bloques de adobe',  
+    'cantidad_articulo' => 4500,  
+    'comprador' => 'Earth Builders Inc.',  
+    'referencia_transaccion' => 'S90123456789012XYZ',  
+    'valor_total' => 26599.95  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 2,  
+    'num_factura' => 'K-2024-67909',  
+    'fecha_venta' => '2024-10-05',  
+    'nombre_articulo' => 'pintura ecológica',  
+    'cantidad_articulo' => 3100,  
+    'comprador' => 'EcoFriendly Paints',  
+    'referencia_transaccion' => 'T01234567890123XYZ',  
+    'valor_total' => 19875.20  
+));
+
 
 insert($con, 'venta', array(
     'venta_empresa' => 3,
@@ -354,6 +577,115 @@ insert($con, 'venta', array(
     'valor_total' => 48000.65
 ));
 
+insert($con, 'venta', array(
+    'venta_empresa' => 3,  
+    'num_factura' => 'K-2024-67910',  
+    'fecha_venta' => '2024-10-14',  
+    'nombre_articulo' => 'ladrillos ecológicos',  
+    'cantidad_articulo' => 4200,  
+    'comprador' => 'EcoBrick Solutions',  
+    'referencia_transaccion' => 'U12345678901234XYZ',  
+    'valor_total' => 27500.60  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 3,  
+    'num_factura' => 'K-2024-67911',  
+    'fecha_venta' => '2024-11-10',  
+    'nombre_articulo' => 'pintura sin VOC',  
+    'cantidad_articulo' => 3600,  
+    'comprador' => 'Sustainable Coatings',  
+    'referencia_transaccion' => 'V23456789012345XYZ',  
+    'valor_total' => 22950.80  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 3,  
+    'num_factura' => 'K-2024-67912',  
+    'fecha_venta' => '2024-12-05',  
+    'nombre_articulo' => 'tejas recicladas',  
+    'cantidad_articulo' => 3900,  
+    'comprador' => 'EcoRoof Materials',  
+    'referencia_transaccion' => 'W34567890123456XYZ',  
+    'valor_total' => 24999.90  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 3,  
+    'num_factura' => 'K-2024-67913',  
+    'fecha_venta' => '2024-10-27',  
+    'nombre_articulo' => 'vidrio templado ecológico',  
+    'cantidad_articulo' => 4100,  
+    'comprador' => 'GreenGlass Ltd.',  
+    'referencia_transaccion' => 'X45678901234567XYZ',  
+    'valor_total' => 25999.99  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 3,  
+    'num_factura' => 'K-2024-67914',  
+    'fecha_venta' => '2024-11-23',  
+    'nombre_articulo' => 'placas de fibra de coco',  
+    'cantidad_articulo' => 2800,  
+    'comprador' => 'Natural Interiors Inc.',  
+    'referencia_transaccion' => 'Y56789012345678XYZ',  
+    'valor_total' => 21899.70  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 3,  
+    'num_factura' => 'K-2024-67915',  
+    'fecha_venta' => '2024-12-15',  
+    'nombre_articulo' => 'aislante de celulosa',  
+    'cantidad_articulo' => 3500,  
+    'comprador' => 'EcoInsulation Corp.',  
+    'referencia_transaccion' => 'Z67890123456789XYZ',  
+    'valor_total' => 23550.50  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 3,  
+    'num_factura' => 'K-2024-67916',  
+    'fecha_venta' => '2024-10-18',  
+    'nombre_articulo' => 'paneles de bambú',  
+    'cantidad_articulo' => 4400,  
+    'comprador' => 'Sustainable Panels Ltd.',  
+    'referencia_transaccion' => 'A78901234567890XYZ',  
+    'valor_total' => 26999.30  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 3,  
+    'num_factura' => 'K-2024-67917',  
+    'fecha_venta' => '2024-11-08',  
+    'nombre_articulo' => 'madera plástica reciclada',  
+    'cantidad_articulo' => 4700,  
+    'comprador' => 'Recycled Timber Co.',  
+    'referencia_transaccion' => 'B89012345678901XYZ',  
+    'valor_total' => 28999.95  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 3,  
+    'num_factura' => 'K-2024-67918',  
+    'fecha_venta' => '2024-12-20',  
+    'nombre_articulo' => 'paneles de corcho',  
+    'cantidad_articulo' => 3200,  
+    'comprador' => 'EcoCork Solutions',  
+    'referencia_transaccion' => 'C90123456789012XYZ',  
+    'valor_total' => 21450.25  
+));
+
+insert($con, 'venta', array(
+    'venta_empresa' => 3,  
+    'num_factura' => 'K-2024-67919',  
+    'fecha_venta' => '2024-10-30',  
+    'nombre_articulo' => 'ladrillos de adobe',  
+    'cantidad_articulo' => 5000,  
+    'comprador' => 'AdobeBuild Industries',  
+    'referencia_transaccion' => 'D01234567890123XYZ',  
+    'valor_total' => 29999.80  
+));
 
 //Controlar recepción del formulario de login
 if ((!empty($_POST['id_company'])) && isset($con)) { //Si se ha recibido el nombre del usuario
