@@ -1,5 +1,5 @@
 <?php
-$credentials = 'server_credentials.txt';
+$credentials = './server_credentials.txt';
 
 if (file_exists($credentials)) {
     require_once $credentials; //A modo de simulación y seguridad, se han guardado las claves de acceso al servidor en un archivo ajeno al actual.
@@ -17,13 +17,13 @@ function connect()
             return $con;
         } else {
             $con = null;
-            echo "<p id='error'>Ha ocurrido un problema con el servidor. Sentimos las molestias.<p/>";
+            echo "<p class='error'>Ha ocurrido un problema con el servidor. Sentimos las molestias.<p/>";
             return $con;
         }
     } catch (mysqli_sql_exception $e) { //Controlar error de conexión
         $con = null;
         $codigo_error = $e->getCode();
-        echo "<p id='error'>Ha ocurrido un problema con el servidor: Código de error $codigo_error. Sentimos las molestias.<p/>";
+        echo "<p class='error'>Ha ocurrido un problema con el servidor: Código de error $codigo_error. Sentimos las molestias.<p/>";
         return $con;
     }
 }
@@ -80,7 +80,7 @@ function select_field($con, $value_to_check, $field, $table)
             }
         } catch (mysqli_sql_exception $e) {
             $codigo_error = $e->getCode();
-            echo "<p id='error'>Error al seleccionar y extraer los datos: Código de error $codigo_error. Sentimos las molestias.<p/>";
+            echo "<p class='error'>Error al seleccionar y extraer los datos: Código de error $codigo_error. Sentimos las molestias.<p/>";
         }
     }
 }
@@ -117,7 +117,7 @@ function insert($con, $table, $array)
 
             //Evitar que se muestre el error de clave duplicada si se intenta insertar un registro ya existente
             if ($codigo_error != 1062) {
-                echo "<p id='error'>Error al seleccionar y extraer los datos: Código de error $codigo_error. Sentimos las molestias.<p/>";
+                echo "<p class='error'>Error al seleccionar y extraer los datos: Código de error $codigo_error. Sentimos las molestias.<p/>";
             }
         }
     }

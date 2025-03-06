@@ -1,10 +1,8 @@
 <?php
 session_start();
 
-require_once 'functions.php';
-
-require_once 'login.html';
-
+require_once './functions.php';
+require_once './login.php'; 
 
 $con = connect();   //Crear conexión a la BDD
 
@@ -358,17 +356,20 @@ insert($con, 'venta', array(
 
 
 //Controlar recepción del formulario de login
-if (!empty($_POST['id_company'])) { //Si se ha recibido el nombre del usuario
+if ((!empty($_POST['id_company'])) && isset($con)) { //Si se ha recibido el nombre del usuario
     
     //Se busca el ID de la empresa introducido en el login en la BDD
     $id = select_field($con, $_POST['id_company'], "id_empresa", "empresa");
 
     if ($id == -1) { //Si no se encuentra la empresa en la BDD...
-        echo "<h3 style='color: darkred'>El ID introducido no coincide con ninguno de nuestra base de datos</h3>";
+        echo "<h3 class='error'>El ID introducido no coincide con ninguno de nuestra base de datos</h3>";
+
     } else { //Si se ha encontrado el usuario en la BDD...
-        echo "<h3 style='color: blue'>Bienvenido, ".$id[0]['nombre_empresa']."</h3><br/><p>Será redireccionado en 2 segundos a su informe trimestral</p>";
-        $_SESSION["id_company"] = $id[0]['id_empresa']; //Se establece el ID de la empresa como variable de la sesión
+        echo "<h3 class='welcome'>Bienvenido, ".$id[0]['nombre_empresa']."</h3><br/><p class='advice'>Será redireccionado en 2 segundos a su informe trimestral</p>";
+
+        //Se establece el ID de la empresa como variable de sesión
+        $_SESSION["id_company"] = $id[0]['id_empresa']; 
         mysqli_close($con);
-        header("Refresh: 2; URL=report.php");
+        header("Refresh: 2; URL='./login.html');
     }
 }
