@@ -53,7 +53,7 @@ if (isset($array_rows)) {
 // Crear la tabla con los datos de venta. Posible omisión si en el html se obtiene el código a partir del buffer de salida ob_start() y ob_get_clean();
 $table = "
     <head>
-        <link rel='stylesheet' href='./stylesTable.css'>
+        <link rel='stylesheet' href='./css/stylesTable.css'>
         </link>
     </head>
     <body>
@@ -103,7 +103,7 @@ if (isset($_POST["pdf"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe de Ventas</title>
-    <link rel="stylesheet" href="stylesReport.css">
+    <link rel="stylesheet" href="./css/stylesReport.css">
     </link>
 </head>
 
