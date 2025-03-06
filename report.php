@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once './functions.php';
-require_once 'dompdf/autoload.inc.php';
+require_once './dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf; // Permitir utilizar los ficheros necesarios del domPdf
 
@@ -10,13 +10,13 @@ $connection = connect();
 
 // Si no hay una sesión activa, se redirige al index
 if (empty($_SESSION["id_company"])) {
-    header("Location: ".$_SERVER['DOCUMENT_ROOT'].'/laworatory/index.php');
+    header("Location: ./index.php");
 }
 
 if (isset($_POST["logout"])) { // Si se pulsa el botón de logout, se cierra la sesión y se redirige al index
     session_destroy();
     mysqli_close($connection);
-    header("Location:". $_SERVER['DOCUMENT_ROOT'].'/laworatory/index.php');
+    header("Location: index.php");
 }
 
 
@@ -103,7 +103,7 @@ if (isset($_POST["pdf"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe de Ventas</title>
-    <link rel="stylesheet" href="<?php echo $_SERVER['DOCUMENT_ROOT'] . '/laworatory/css/stylesReport.css'; ?>">
+    <link rel="stylesheet" href="stylesReport.css">
     </link>
 </head>
 

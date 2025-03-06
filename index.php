@@ -2,7 +2,7 @@
 session_start();
 
 require_once './functions.php';
-require_once './login.php'; 
+require_once './login.html'; 
 
 $con = connect();   //Crear conexión a la BDD
 
@@ -370,6 +370,6 @@ if ((!empty($_POST['id_company'])) && isset($con)) { //Si se ha recibido el nomb
         //Se establece el ID de la empresa como variable de sesión
         $_SESSION["id_company"] = $id[0]['id_empresa']; 
         mysqli_close($con);
-        header("Refresh: 2; URL='./login.html');
+    header("Refresh: 2; URL='./report.php");
     }
 }
