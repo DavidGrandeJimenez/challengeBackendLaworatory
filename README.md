@@ -3,7 +3,7 @@
 Este proyecto es un challenge de back-end para Laworatory. El objetivo es desarrollar un programa PHP que se conecte a una BDD (si no existe, el programa la crea y configura automáticamente) y muestre los resultados deseados en una tabla HTML.
 
 ## Requisitos
-- Xampp con Apache y MySQL
+- Xampp con Apache y MySQL (se ha desarrollado y comprobado con Xampp v. 8.2.12)
 
 ## Instalación
 
@@ -37,7 +37,7 @@ Este proyecto es un challenge de back-end para Laworatory. El objetivo es desarr
 
 - La mayoría de errores referentes a la BDD han sido controlados mostrando su código de error correspondiente. Esto supone de gran utilidad para los desarrolladores.
 
-- Los registros constan de 3 empresas de la tabla *empresa* y 10 registros de ventas de la tabla *venta* correspondiente a cada una de las empresas. Siendo así un total de 33 registros.
+- Los registros constan de 3 empresas de la tabla *empresa* y 20 registros de ventas de la tabla *venta* correspondiente a cada una de las empresas. Siendo así un total de 63 registros.
 
 - Se han implementado los estilos CSS "puro" mediante los archivos de la carpeta **css**.
 
