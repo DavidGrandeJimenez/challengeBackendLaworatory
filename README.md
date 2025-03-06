@@ -11,16 +11,16 @@ Este proyecto es un challenge de back-end para Laworatory. El objetivo es desarr
     ```bash
     git clone https://github.com/DavidGrandeJimenez/challengeBackendLaworatory.git
     ```
-2. Accede a la carpeta htdocs de los directorios de Xampp (por defecto, suele ubicarse en sistemas Windws  en C:\xampp\htdocs) en tu equipo y crea una nueva carpeta con un nombre a tu gusto: zB. challengeLaworatory ó davidGrande
+2. Accede a la carpeta htdocs de los directorios de Xampp (por defecto, suele ubicarse en sistemas Windws en C:\xampp\htdocs) en su equipo 
 
-3. Pega en la nueva carpeta creada los ficheros internos del proyecto, de modo que **NO se pegue al htdocs del Xampp solamente la carpeta general** del proyecto (***challengeBackendLaworatory***), sino sus archivos internos.
+3. Pega o descarga en dicha ruta la carpeta general del proyecto challengeBackendLaworatory (puedes cambiarle el nombre a dicha carpeta a cualquiera de su agrado).
     
 
 ## Uso
 
 1. Abre el programa Xampp y habilita el servidor Apache y MySQL
 
-2. Accede al navegador de tu preferencia e introduce en la barra de búsqueda la palabra **localhost/** seguido del nombre de la carpeta creada dentro de htdocs anteriormente. Por ejemplo: ***localhost/challengeLaworatory*** ó ***localhost/davidGrande***
+2. Accede al navegador de su preferencia e introduce en la barra de búsqueda la palabra ***localhost/*** seguido del ***nombre de la carpeta creada dentro de htdocs*** anteriormente (puede seguir siendo challengeBackendLaworatory o el nombre que haya decidido anteriormente). Por ejemplo: *localhost/challengeBackendLaworatory* ó *localhost/davidGrande*
 
 3. Comprueba y disfruta del proyecto :)
 
